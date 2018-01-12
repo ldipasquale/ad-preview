@@ -1,6 +1,14 @@
 &__Carousel
-  .slick-slide:not(.slick-center)
-    &.jampp__Device
-      opacity: 0.4
-      transform: scale3d(.8, .8, .8)
-      transform-origin: 50% 50%
+  height: 100%
+  display: flex !important
+  align-items: center
+  min-height: $deviceHeight
+
+  .slick-slide
+    outline: 0
+
+    &:not(.slick-center)
+      .jampp__Device
+        opacity: 0.4
+        transform: scale3d(.8, .8, .8)
+        transform-origin: 50% 50%

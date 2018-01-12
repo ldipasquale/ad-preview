@@ -1,6 +1,12 @@
 &__Device
   text-align: center
   color: #000
+  height: $deviceHeight
+  transition: all .5s
+
+  &__Content
+    transform: scale3d($deviceScaleRatio, $deviceScaleRatio, $deviceScaleRatio)
+    transform-origin: 50% 0
 
   &__Model
     @import 'models'

@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jampp - Ad Preview</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/css/global.css">
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-  </head>
-  <body><!DOCTYPE html>
-<html>
-  <head>
     <meta charset="utf-8">
     <title>Jampp - Ad Preview</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/css/global.css">
@@ -15,8 +8,30 @@
   </head>
   <body>
     <div class="jampp__Body">
-      <div class="jampp__Body__Content">
+      <div class="jampp__Body__Content jampp__Body__Content--adBlockDetected">
+        <div class="jampp__GlobalMessage">
+          <div class="jampp__GlobalMessage__Content">
+            <h1>Adblock detected</h1>
+            <p>
+              It appears that you are using a browser extension that is blocking some of the content we are trying to show. Please disable it and try again.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jampp__Body__Content jampp__Body__Content--adBlockNotDetected">
         <div class="jampp__Carousel"></div>
+        
+        <div class="jampp__Body__Content__Footer">
+          <div class="jampp__Body__Content__Footer__Logo"></div>
+          <a
+            class="jampp__FieldsLink"
+            href="{{hash}}.json"
+            target="_blank"
+          >
+            {}
+          </a>
+        </div>
       </div>
     </div>
 
@@ -24,7 +39,7 @@
       <div>
         <div class="jampp__Device">
           <div class="jampp__Device__Content">
-            <div class="jampp__Device__Model jampp__Device__Model--nexus5">
+            <div class="jampp__Device__Model">
               <div class="top-bar"></div>
               <div class="sleep"></div>
               <div class="volume"></div>
@@ -43,15 +58,10 @@
     </template>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="vendor/fuckAdBlock/fuckAdBlock.min.js"></script>
+    <script type="text/javascript" src="scripts/scopeCss.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
-</html>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/adBlock.js"></script>
   </body>
 </html>

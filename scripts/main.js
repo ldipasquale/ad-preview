@@ -1,48 +1,112 @@
-var ads = [{
-  width: 320,
-  height: 480,
-  tag: '<meta charset="utf-8"><style>body{margin:0;padding:0;}.link{position:absolute;background:#eee;min-width:320px;min-height:480px;width:100%;height:100%;overflow:hidden;top:0;left:0;text-decoration:none !important;}.ad{position:absolute;top:10px;left:10px;right:10px;bottom:10px;font-family:\'Helvetica\', sans-serif;background:#fff;box-sizing:content-box;text-align:center;border-radius:3px;overflow:hidden;box-shadow:0 1px 0px #ddd;border:1px solid #ddd;}.asset{position:absolute;top:0;left:0;right:0;height:40%;background-size:cover;background-repeat:no-repeat;}.container{position:absolute;margin-top:-36px;top:40%;left:0;right:0;bottom:0;padding:0 15px;}img{width:72px;height:72px;border-radius:3px;}h1{padding:0;margin:20px 0;font-size:20px;font-weight:400;color:#333;}p{color:#4a4a4a;font-size:16px;margin:20px 0;font-weight:100;}.button-container{position:absolute;bottom:20px;left:0;right:0;}button{margin:0 auto;border-radius:3px;background:#1bc738;color:#fff;font-weight:400;outline:0;border:0;padding:10px 15px;font-size:14px;}</style><meta name="viewport" content="width=device-width, initial-scale=1"><a class="link" href="{click_url}" data-field="container" style="background: rgb(255, 255, 255); border: none; transform: none;"><div class="ad" data-field="adContainer" style="background: linear-gradient(0deg, rgb(255, 255, 255), rgb(97, 233, 29)); border: none; transform: none;"><div class="asset" style="background-image: url(&quot;https://s3.amazonaws.com/creatives.jampp.com/assets/344/1200x627_N7ws_jWswMH5vV8WgbkTuA.jpg&quot;); border: none; transform: none;" data-field="media"></div><div class="container"><img src="https://s3.amazonaws.com/creatives.jampp.com/jua34gX6kTHGkp0HxCdGAw.jpeg"><h1 data-field="headline" style="text-align: center; color: rgb(51, 51, 51); font-weight: 600; border: none; transform: none;">100 000 billets à partir de 4,99€</h1><p data-field="promoText" style="text-align: center; color: rgb(74, 74, 74); border: none; transform: none;">Offre spéciale Nouvel an chez FlixBus ! Obtiens ton billet à 4,99€ ou 8,99€ avant le 07.01</p><div class="button-container"><button data-field="callToAction" style="background: rgb(255, 170, 0); color: rgb(255, 255, 255); border: none; transform: none;">Réservez ici!</button></div></div></div></a> <script type="text/javascript">var anchor = document.querySelector(\'a\');anchor.href+=\'&executed=1\';var params=\'\';function appendClickPosition(x,y){if(params===\'\'){params+=\'&touchX=\'+parseFloat(x/anchor.offsetWidth).toFixed(3)+\'&touchY=\'+parseFloat(y/anchor.offsetHeight).toFixed(3);anchor.href+=params;}}anchor.addEventListener(\'touchstart\',function(e){if(e.touches[0]){appendClickPosition(e.touches[0].pageX,e.touches[0].pageY)}});anchor.onclick=function(e){appendClickPosition(e.clientX,e.clientY)};</script>',
+var ads = '{{ads}}'
+
+/*
+var ads = [, {
+  width: 768,
+  height: 1024,
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D.ad%7Bdisplay%3Ablock%3Bposition%3Aabsolute%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A100%25%3Bmin-width%3A768px%3Bmin-height%3A1024px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bmargin-top%3A60px%3Bwidth%3A64px%3Bheight%3A64px%3Bborder-radius%3A10px%7Dh1%7Bmargin%3A0%3Bmargin-top%3A12px%3Bcolor%3A%23000%3Bfont-size%3A32px%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A0%3Bright%3A0%3Btop%3A50px%3Bwidth%3A100%25%3Bheight%3A125px%7D.advertiser%7Bdisplay%3Ainline-block%3Bbackground%3A%23fff%3Bwidth%3A248px%3Bheight%3A248px%3Bborder-radius%3A100%25%7D.button-container%7Bposition%3Aabsolute%3Bleft%3A10px%3Bright%3A10px%3Bbottom%3A30px%3Bpadding%3A48px%3Bbackground-color%3A%23fff%3Bborder-radius%3A15px%7D.button-container%20p%7Bmargin%3A0%3Bfont-size%3A40px%3Bline-height%3A1.3em%3Bletter-spacing%3A0.1px%3Bmargin-bottom%3A48px%3Bcolor%3A%23000%3Bfont-weight%3A200%7Dbutton%7Bpadding%3A13px%2045px%3Bbackground%3A%234a90e2%3Bfont-size%3A36px%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%3Bletter-spacing%3A0.5px%3B%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%3E%3Cdiv%20class%3D'advertiser'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fa%3E",
 }, {
   width: 320,
   height: 50,
-  tag: '<meta charset="utf-8"><style>body{margin:0;padding:0;}.link{position:absolute;min-width:320px;min-height:50px;width:100%;height:100%;overflow:hidden;top:0;left:0;text-decoration:none !important;}.ad{position:absolute;top:0px;left:0px;right:0px;bottom:0px;font-family:\'Helvetica\', sans-serif;background:#fefefe;box-sizing:content-box;padding:4px;text-align:right;}.advertiser{float:left;width:63%;text-align:left;}div.flip-container{position:relative;width:42px;height:42px;display:inline-block;vertical-align:middle;margin-right:5px;}.flip1,.flip2{position:absolute;top:0;width:100%;height:100%;border-radius:5px;object-fit:cover;transform-style:preserve-3d;backface-visibility:hidden;}img.flip1{z-index:1;animation:2s linear infinite alternate flip1;}img.flip2{z-index:2;animation:2s linear infinite alternate flip2;}.text{width:72%;display:inline-block;max-height:42px;vertical-align:middle;}h1{margin:0;padding:0;font-size:14px;font-weight:700;color:#333;line-height:16px;margin-bottom:3px;display:inline-block;}p{display:inline-block;line-height:12px;color:#4a4a4a;font-size:12px;margin:0;}button{border-radius:5px;background:#1bc738;color:#fff;letter-spacing:0.3px;font-weight:400;outline:0;border:0;padding:6px 8px;font-size:12px;margin-top:8px;margin-right:4px;}@-webkit-keyframes \'flip1\'{0%{-webkit-transform:perspective(0px) rotateY(180deg);}50%{-webkit-transform:perspective(0px) rotateY(90deg);opacity:1;}100%{-webkit-transform:perspective(0px) rotateY(0deg);}}@-webkit-keyframes \'flip2\'{0%{-webkit-transform:perspective(0px);}49%{opacity:1;}50%{-webkit-transform:perspective(0px) rotateY(90deg);opacity:0;}100%{-webkit-transform:perspective(0px) rotateY(180deg);opacity:0;}}</style><meta name="viewport" content="width=device-width, initial-scale=1"><a class="link" href="{click_url}"><div class="ad" data-field="adContainer" style="background: linear-gradient(0deg, rgb(255, 255, 255), rgb(97, 233, 29)); border: none; transform: none;"><div class="advertiser"><div class="flip-container"><img class="flip1" src="https://s3.amazonaws.com/creatives.jampp.com/jua34gX6kTHGkp0HxCdGAw.jpeg"><img class="flip2" src="https://s3.amazonaws.com/creatives.jampp.com/assets/344/1200x627_N7ws_jWswMH5vV8WgbkTuA.jpg" data-field="media" style="border: none; transform: none;"></div><div class="text"><h1 data-field="headline" style="text-align: center; color: rgb(51, 51, 51); font-weight: 600; border: none; transform: none;">100 000 billets à partir de 4,99€</h1><div><p data-field="promoText" style="text-align: center; color: rgb(74, 74, 74); border: none; transform: none;">Offre spéciale Nouvel an chez FlixBus ! Obtiens ton billet à 4,99€ ou 8,99€ avant le 07.01</p></div></div></div><button data-field="callToAction" style="background: rgb(255, 170, 0); color: rgb(255, 255, 255); border: none; transform: none;">Réservez ici!</button></div></a> <script type="text/javascript">var anchor = document.querySelector(\'a\');anchor.href+=\'&executed=1\';var params=\'\';function appendClickPosition(x,y){if(params===\'\'){params+=\'&touchX=\'+parseFloat(x/anchor.offsetWidth).toFixed(3)+\'&touchY=\'+parseFloat(y/anchor.offsetHeight).toFixed(3);anchor.href+=params;}}anchor.addEventListener(\'touchstart\',function(e){if(e.touches[0]){appendClickPosition(e.touches[0].pageX,e.touches[0].pageY)}});anchor.onclick=function(e){appendClickPosition(e.clientX,e.clientY)};</script>',
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D%40keyframes%20slidein_out%7Bfrom%7Bopacity%3A1%7Dto%7Bopacity%3A0%7D%7D%40keyframes%20slidein_in%7Bfrom%7Bopacity%3A0%7Dto%7Bopacity%3A1%7D%7D.ad%7Bdisplay%3Ablock%3Bposition%3Arelative%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A50px%3Bmin-width%3A320px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A5px%3Btop%3A-10px%3Bbottom%3A-10px%3Bdisplay%3Aflex%3Bflex-direction%3Acolumn%3Bjustify-content%3Acenter%3Balign-items%3Acenter%3Bbackground%3A%23fff%3Bwidth%3A70px%3Bheight%3A70px%3Bborder-radius%3A100%25%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bwidth%3A18px%3Bheight%3A18px%3Bborder-radius%3A5px%7Dh1%7Bmargin%3A0%3Bmargin-top%3A4px%3Bcolor%3A%23000%3Bletter-spacing%3A-0.1px%3Bfont-size%3A11px%7D.button-container%7Bpadding%3A5px%3Bposition%3Aabsolute%3Bwidth%3Aauto%3Btop%3A0%3Bleft%3A40%25%3Bright%3A0%3Bbottom%3A0%3Bbackground-color%3A%23fff%3Btext-align%3Acenter%3Bborder-radius%3A10px%3Bborder-top-right-radius%3A0%3Bborder-bottom-right-radius%3A0%7D.frame%7Bposition%3Aabsolute%3Btop%3A0%3Bleft%3A0%3Bright%3A0%3Bbottom%3A0%3Bdisplay%3Aflex%3Bjustify-content%3Acenter%3Balign-items%3Acenter%7D.frame-1%7Banimation-name%3Aslidein_out%3Banimation-delay%3A2.5s%3Banimation-duration%3A1s%3Banimation-fill-mode%3Aforwards%3B-webkit-animation-delay%3A%201s%3B-webkit-animation-name%3Aslidein_out%3B-webkit-animation-duration%3A1s%3B-webkit-animation-fill-mode%3Aforwards%7Dp%7Bfont-size%3A11px%3Bline-height%3A1.3em%3Bcolor%3A%23000%3Bfont-weight%3A200%7D.frame-2%7Bopacity%3A0%3Banimation-name%3Aslidein_in%3Banimation-delay%3A3s%3Banimation-duration%3A1s%3Banimation-fill-mode%3Aforwards%3B-webkit-animation-delay%3A%201.5s%3B-webkit-animation-name%3Aslidein_in%3B-webkit-animation-duration%3A1s%3B-webkit-animation-fill-mode%3Aforwards%7Dbutton%7Bpadding%3A5px%2030px%3Bbackground%3A%234a90e2%3Bfont-size%3A10px%3Bletter-spacing%3A0%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cdiv%20class%3D'frame%20frame-1'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'frame%20frame-2'%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3C%2Fa%3E",
+}, {
+  width: 320,
+  height: 480,
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D.ad%7Bdisplay%3Ablock%3Bposition%3Aabsolute%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A100%25%3Bmin-width%3A320px%3Bmin-height%3A480px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bmargin-top%3A27px%3Bwidth%3A30px%3Bheight%3A30px%3Bborder-radius%3A5px%7Dh1%7Bmargin%3A0%3Bmargin-top%3A12px%3Bcolor%3A%23000%3Bfont-size%3A18px%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A0%3Bright%3A0%3Btop%3A50px%3Bwidth%3A100%25%3Bheight%3A125px%7D.advertiser%7Bdisplay%3Ainline-block%3Bbackground%3A%23fff%3Bwidth%3A125px%3Bheight%3A125px%3Bborder-radius%3A100px%7D.button-container%7Bposition%3Aabsolute%3Bleft%3A10px%3Bright%3A10px%3Bbottom%3A10px%3Bpadding%3A24px%3Bbackground-color%3A%23fff%3Bborder-radius%3A15px%7D.button-container%20p%7Bmargin%3A0%3Bfont-size%3A20px%3Bline-height%3A1.3em%3Bletter-spacing%3A0.1px%3Bmargin-bottom%3A24px%3Bcolor%3A%23000%3Bfont-weight%3A200%7Dbutton%7Bpadding%3A13px%2045px%3Bbackground%3A%234a90e2%3Bfont-size%3A18px%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%3E%3Cdiv%20class%3D'advertiser'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fa%3E",
+}, {
+  width: 480,
+  height: 320,
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D.ad%7Bdisplay%3Ablock%3Bposition%3Aabsolute%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A100%25%3Bmin-width%3A480px%3Bmin-height%3A320px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bmargin-top%3A27px%3Bwidth%3A30px%3Bheight%3A30px%3Bborder-radius%3A5px%7Dh1%7Bmargin%3A0%3Bmargin-top%3A12px%3Bcolor%3A%23000%3Bfont-size%3A18px%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A0%3Bright%3A0%3Btop%3A10px%3Bwidth%3A100%25%3Bheight%3A125px%7D.advertiser%7Bdisplay%3Ainline-block%3Bbackground%3A%23fff%3Bwidth%3A125px%3Bheight%3A125px%3Bborder-radius%3A100px%7D.button-container%7Bposition%3Aabsolute%3Bmax-width%3A60%25%3Bmargin%3A%200%20auto%3Bleft%3A10px%3Bright%3A10px%3Bbottom%3A10px%3Bpadding%3A24px%3Bbackground-color%3A%23fff%3Bborder-radius%3A15px%7D.button-container%20p%7Bmargin%3A0%3Bfont-size%3A20px%3Bline-height%3A1.3em%3Bletter-spacing%3A0.1px%3Bmargin-bottom%3A24px%3Bcolor%3A%23000%3Bfont-weight%3A200%7Dbutton%7Bpadding%3A13px%2045px%3Bbackground%3A%234a90e2%3Bfont-size%3A18px%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%3E%3Cdiv%20class%3D'advertiser'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fa%3E",
+}, {
+  width: 1024,
+  height: 768,
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D.ad%7Bdisplay%3Ablock%3Bposition%3Aabsolute%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A100%25%3Bmin-width%3A1024px%3Bmin-height%3A768px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bmargin-top%3A60px%3Bwidth%3A64px%3Bheight%3A64px%3Bborder-radius%3A10px%7Dh1%7Bmargin%3A0%3Bmargin-top%3A12px%3Bcolor%3A%23000%3Bfont-size%3A32px%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A0%3Bright%3A0%3Btop%3A50px%3Bwidth%3A100%25%3Bheight%3A125px%7D.advertiser%7Bdisplay%3Ainline-block%3Bbackground%3A%23fff%3Bwidth%3A248px%3Bheight%3A248px%3Bborder-radius%3A100%25%7D.button-container%7Bposition%3Aabsolute%3Bmax-width%3A60%25%3Bmargin%3A%200%20auto%3Bleft%3A10px%3Bright%3A10px%3Bbottom%3A30px%3Bpadding%3A48px%3Bbackground-color%3A%23fff%3Bborder-radius%3A15px%7D.button-container%20p%7Bmargin%3A0%3Bfont-size%3A40px%3Bline-height%3A1.3em%3Bletter-spacing%3A0.1px%3Bmargin-bottom%3A48px%3Bcolor%3A%23000%3Bfont-weight%3A200%7Dbutton%7Bpadding%3A13px%2045px%3Bbackground%3A%234a90e2%3Bfont-size%3A36px%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%3Bletter-spacing%3A0.5px%3B%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%3E%3Cdiv%20class%3D'advertiser'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fa%3E",
+}, {
+  width: 728,
+  height: 90,
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D.ad%7Bdisplay%3Ablock%3Bposition%3Arelative%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A90px%3Bmin-width%3A768px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A15px%3Btop%3A-15px%3Bbottom%3A-15px%3Bdisplay%3Aflex%3Bflex-direction%3Acolumn%3Bjustify-content%3Acenter%3Balign-items%3Acenter%3Bbackground%3A%23fff%3Bwidth%3A120px%3Bheight%3A120px%3Bborder-radius%3A100%25%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bwidth%3A36px%3Bheight%3A36px%3Bborder-radius%3A5px%7Dh1%7Bmargin%3A0%3Bmargin-top%3A4px%3Bcolor%3A%23000%3Bletter-spacing%3A-0.1px%3Bfont-size%3A16px%7D.button-container%7Bdisplay%3Aflex%3Bjustify-content%3Acenter%3Balign-items%3Acenter%3Bpadding%3A5px%3Bposition%3Aabsolute%3Bwidth%3Aauto%3Btop%3A0%3Bleft%3A300px%3Bright%3A0%3Bbottom%3A0%3Bbackground-color%3A%23fff%3Btext-align%3Acenter%3Bborder-radius%3A10px%3Bborder-top-right-radius%3A0%3Bborder-bottom-right-radius%3A0%7Dp%7Bflex%3A1%3Bmargin%3A0%3Bfont-size%3A18px%3Bline-height%3A1.3em%3Bcolor%3A%23000%3Bfont-weight%3A200%3Bmargin-right%3A28px%7Dbutton%7Bpadding%3A8px%2030px%3Bbackground%3A%234a90e2%3Bfont-size%3A16px%3Bletter-spacing%3A0%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%3Bvertical-align%3Amiddle%3Bmargin-right%3A16px%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fa%3E",
 }, {
   width: 300,
   height: 250,
-  tag: '<meta charset="utf-8"><style>body{margin:0;padding:0;}.link{position:absolute;background:#eee;min-width:300px;min-height:250px;width:100%;height:100%;overflow:hidden;top:0;left:0;text-decoration:none !important;}.ad{position:absolute;top:0;left:0;right:0;bottom:0;font-family:\'Helvetica\', sans-serif;background:#fff;box-sizing:content-box;text-align:center;}.asset{position:absolute;top:0;left:0;right:0;height:40%;background-size:cover;background-repeat:no-repeat;}.container{position:absolute;margin-top:-27px;top:40%;left:0;right:0;bottom:0;}img{width:54px;height:54px;border-radius:3px;}h1{padding:0;margin:7px 10px;font-size:18px;font-weight:400;color:#333;}p{color:#4a4a4a;font-size:14px;margin:7px 10px;font-weight:100;}.button-container{position:absolute;bottom:10px;left:0;right:0;}button{margin:0 auto;border-radius:3px;background:#1bc738;color:#fff;font-weight:400;outline:0;border:0;padding:8px 10px;font-size:13px;}</style><meta name=\'viewport\' content=\'width=device-width, initial-scale=1\'><a class=\'link\' href=\'{click_url}\'><div class=\'ad\' data-field=\'adContainer\'><div class=\'asset\' style=\'background-image: url(https://s3.amazonaws.com/creatives.jampp.com/assets/344/1200x627_l7Es5iOuS8GFK6O89mz9hg.jpg)\' data-field=\'media\'></div><div class=\'container\'><img src=\'https://s3.amazonaws.com/creatives.jampp.com/jua34gX6kTHGkp0HxCdGAw.jpeg\'><h1 data-field=\'headline\'>100 000 billets à partir de 4,99€</h1><p data-field=\'promoText\'>Offre spéciale Nouvel an chez FlixBus ! Obtiens ton billet à 4,99€ ou 8,99€ avant le 07.01</p><div class=\'button-container\'><button data-field=\'callToAction\'>Réservez ici!</button></div></div></div></a> <script type="text/javascript">var anchor = document.querySelector(\'a\');anchor.href+=\'&executed=1\';var params=\'\';function appendClickPosition(x,y){if(params===\'\'){params+=\'&touchX=\'+parseFloat(x/anchor.offsetWidth).toFixed(3)+\'&touchY=\'+parseFloat(y/anchor.offsetHeight).toFixed(3);anchor.href+=params;}}anchor.addEventListener(\'touchstart\',function(e){if(e.touches[0]){appendClickPosition(e.touches[0].pageX,e.touches[0].pageY)}});anchor.onclick=function(e){appendClickPosition(e.clientX,e.clientY)};</script>',
-}, {
-  width: 300,
-  height: 250,
-  tag: '<meta charset="utf-8"><style>body{margin:0;padding:0;}.link{position:absolute;background:#eee;min-width:300px;min-height:250px;width:100%;height:100%;overflow:hidden;top:0;left:0;text-decoration:none !important;}.ad{position:absolute;top:0;left:0;right:0;bottom:0;font-family:\'Helvetica\', sans-serif;background:#fff;box-sizing:content-box;text-align:center;}.asset{position:absolute;top:0;left:0;right:0;height:40%;background-size:cover;background-repeat:no-repeat;}.container{position:absolute;margin-top:-27px;top:40%;left:0;right:0;bottom:0;}img{width:54px;height:54px;border-radius:3px;}h1{padding:0;margin:7px 10px;font-size:18px;font-weight:400;color:#333;}p{color:#4a4a4a;font-size:14px;margin:7px 10px;font-weight:100;}.button-container{position:absolute;bottom:10px;left:0;right:0;}button{margin:0 auto;border-radius:3px;background:#1bc738;color:#fff;font-weight:400;outline:0;border:0;padding:8px 10px;font-size:13px;}</style><meta name=\'viewport\' content=\'width=device-width, initial-scale=1\'><a class=\'link\' href=\'{click_url}\'><div class=\'ad\' data-field=\'adContainer\'><div class=\'asset\' style=\'background-image: url(https://s3.amazonaws.com/creatives.jampp.com/assets/344/1200x627_l7Es5iOuS8GFK6O89mz9hg.jpg)\' data-field=\'media\'></div><div class=\'container\'><img src=\'https://s3.amazonaws.com/creatives.jampp.com/jua34gX6kTHGkp0HxCdGAw.jpeg\'><h1 data-field=\'headline\'>100 000 billets à partir de 4,99€</h1><p data-field=\'promoText\'>Offre spéciale Nouvel an chez FlixBus ! Obtiens ton billet à 4,99€ ou 8,99€ avant le 07.01</p><div class=\'button-container\'><button data-field=\'callToAction\'>Réservez ici!</button></div></div></div></a> <script type="text/javascript">var anchor = document.querySelector(\'a\');anchor.href+=\'&executed=1\';var params=\'\';function appendClickPosition(x,y){if(params===\'\'){params+=\'&touchX=\'+parseFloat(x/anchor.offsetWidth).toFixed(3)+\'&touchY=\'+parseFloat(y/anchor.offsetHeight).toFixed(3);anchor.href+=params;}}anchor.addEventListener(\'touchstart\',function(e){if(e.touches[0]){appendClickPosition(e.touches[0].pageX,e.touches[0].pageY)}});anchor.onclick=function(e){appendClickPosition(e.clientX,e.clientY)};</script>',
+  tag: "%3Cmeta%20charset%3D'UTF-8'%3E%3Cmeta%20name%3D'viewport'%20content%3D'width%3Ddevice-width%2C%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3D0'%3E%3Cstyle%3Ebody%7Bmargin%3A0%3Bpadding%3A0%3B-webkit-font-smoothing%3Aantialiased%3B-moz-osx-font-smoothing%3Agrayscale%3B-webkit-text-size-adjust%3A100%25%3B-o-text-size-adjust%3A100%25%3B-ms-text-size-adjust%3A100%25%3B-moz-text-size-adjust%3A100%25%3Btext-size-adjust%3A100%25%7D.ad%7Bdisplay%3Ablock%3Bposition%3Arelative%3Btext-align%3Acenter%3Bwidth%3A100%25%3Bheight%3A100%25%3Bmin-width%3A300px%3Bmin-height%3A250px%3Boverflow%3Ahidden%3Btext-decoration%3Anone%20!important%3Bfont-family%3A'Helvetica%20Neue'%2Csans-serif%3Bfont-size%3A0%3Bbackground%3Ano-repeat%20center%3Bbackground-size%3Acover%7D.icon%7Bbackground-size%3Acover%3Bdisplay%3Ainline-block%3Bmargin-top%3A14px%3Bwidth%3A24px%3Bheight%3A24px%3Bborder-radius%3A5px%7Dh1%7Bcolor%3A%23000%3Bfont-size%3A12px%3Bmargin%3A0%3Bmargin-top%3A2px%3B%7D.advertiser-container%7Bposition%3Aabsolute%3Bleft%3A0%3Bright%3A0%3Btop%3A10px%3Bwidth%3A100%25%3Bheight%3A74px%7D.advertiser%7Bdisplay%3Ainline-block%3Bbackground%3A%23fff%3Bwidth%3A74px%3Bheight%3A74px%3Bborder-radius%3A100px%7D.button-container%7Bposition%3Aabsolute%3Bleft%3A20px%3Bright%3A20px%3Bbottom%3A10px%3Bpadding%3A16px%3Bbackground-color%3A%23fff%3Bborder-radius%3A15px%7Dp%7Bmargin%3A0%3Bfont-size%3A16px%3Bline-height%3A1.3em%3Bletter-spacing%3A0.1px%3Bmargin-bottom%3A16px%3Bcolor%3A%23000%3Bfont-weight%3A200%7Dbutton%7Bpadding%3A10px%2035px%3Bbackground%3A%234a90e2%3Bfont-size%3A16px%3Bborder%3A0%3Boutline%3A0%3Bborder-radius%3A0%3Bfont-weight%3A200%3Bcolor%3A%23fff%3Btext-transform%3Auppercase%7D%3C%2Fstyle%3E%3Ca%20class%3D'ad'%20data-field%3D'media'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2Fassets%2F285%2F1200x627_6MfMZTpCc4NqcQ8qd1cwUA.jpg)'%20href%3D'%7Bclick_url%7D'%3E%3Cdiv%20class%3D'advertiser-container'%3E%3Cdiv%20class%3D'advertiser'%20data-field%3D'advertiserContainer'%3E%3Cdiv%20class%3D'icon'%20style%3D'background-image%3Aurl(https%3A%2F%2Fs3.amazonaws.com%2Fcreatives.jampp.com%2FaXrvdRCnmGNmAbBBwGst9w.png)'%3E%3C%2Fdiv%3E%3Ch1%20data-field%3D'appName'%3EApp%20Name%3C%2Fh1%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3Cdiv%20class%3D'button-container'%20data-field%3D'contentContainer'%3E%3Cp%20data-field%3D'headline'%3EHeaasd%20asda%20asdf%3C%2Fp%3E%3Cbutton%20data-field%3D'callToAction'%3EOrder%20Now%3C%2Fbutton%3E%3C%2Fdiv%3E%3C%2Fa%3E",
 }]
+*/
 
-var adsHasAppended = false
+var adsHasBeenAppended = false
+
+const getDevice = (width, height) => {
+  const orientation = width >= 320 && height >= 320 && width > height
+    ? 'landscape'
+    : 'portait'
+
+  let shape = 'phone'
+  let model = 'nexus5'
+
+  if (width > 480 || height > 480) {
+    shape = 'tablet'
+    model = 'ipad'
+  }
+
+  return { shape, model, orientation }
+}
 
 $(document).ready(function() {
-  if (!adsHasAppended) {
-    adsHasAppended = true
+  if (!adsHasBeenAppended) {
+    adsHasBeenAppended = true
 
     var deviceTemplate = $('#jampp__Carousel__Slide')
 
-    for (var adIndex = 0; adIndex < ads.length; adIndex++) {
-      var ad = ads[adIndex]
+    ads.forEach((ad, adIndex) => {
+      // Define adTag and create adNode with its dimensions
+      var adTag = `<div>${decodeURIComponent(ad.tag).replace(new RegExp('<style>', 'g'), '<style scoped>')}</div>`
 
-      var carouselSlide = $(deviceTemplate.clone().html())
+      var adNode = $('<div></div>')
+        .addClass('jampp__Ad__Content')
+        .addClass(`jampp__Ad__Content--width-${ad.width}`)
+        .addClass(`jampp__Ad__Content--height-${ad.height}`)
+        .css({
+          width: `${ad.width}px`,
+          height: `${ad.height}px`,
+        })
+        .html(adTag)
 
-      var adTag = ad.tag.replace(new RegExp('<style>', 'g'), '<style scoped>')
+      // Define device based on the template
+      var device = $(deviceTemplate.clone().html())
 
+      const { shape, orientation, model } = getDevice(parseInt(ad.width), parseInt(ad.height))
 
-      carouselSlide
+      // Define its device type (tablet/phone) based on the dimensions
+      device
+        .find('.jampp__Device')
+        .addClass(`jampp__Device--shape-${shape}`)
+        .addClass(`jampp__Device--orientation-${orientation}`)
+        .addClass(`jampp__Device--shape-${shape}--orientation-${orientation}`)
+
+      // Define its device model based on the dimensions
+      device
+        .find('.jampp__Device__Model')
+        .addClass(`jampp__Device__Model--${model}`)
+        .addClass(`jampp__Device__Model--${model}--${orientation}`)
+
+      // Put adNode in the device
+      device
         .find('.jampp__Ad')
-        .html($('<div class="jampp__Ad__Content" style="width:' + ad.width + 'px; height:' + ad.height + 'px"><div>' + adTag + '</div></div>'))
+        .html(adNode)
 
-      $('.jampp__Carousel').append('<div>' + carouselSlide.html() + '</div>')
+      // Add device slide to carousel
+      $('.jampp__Carousel').append(device)
 
+      // Scope ad style only in this device
       var carouselSlideInserted = $('.jampp__Carousel').children(':last')
 
-      scopeCss(carouselSlideInserted.find('.jampp__Ad__Content > div')[0], carouselSlideInserted.find('.jampp__Ad__Content')[0], 'adId' + adIndex)
-    }
+      scopeCss(
+        carouselSlideInserted.find('.jampp__Ad__Content > div')[0], 
+        carouselSlideInserted.find('.jampp__Ad__Content')[0], 
+        'adId' + adIndex
+      )
+    })
 
+    // Initialize carousel
     $('.jampp__Carousel').slick({
       arrows: false,
       dots: false,
@@ -54,69 +118,3 @@ $(document).ready(function() {
     })
   }
 })
-
-function scopeTag(tag, prefix) {
-  const re = new RegExp('([^\r\n,{}]+)(,(?=[^}]*{)|\s*{)', 'g') // eslint-disable-line no-control-regex,no-useless-escape
-
-  return tag.replace(re, (trash, rawElement, brackets) => {
-    if (rawElement.match(/^\s*(@media|@.*keyframes|to|from|@font-face|1?[0-9]?[0-9])/)) {
-      return `${rawElement}${brackets}`
-    }
-
-    let element = rawElement
-
-    if (element.match(/:scope/)) {
-      element = rawElement.replace(/([^\s]*):scope/, ((h0, h1) => {
-        if (h1 === '') {
-          return '> *'
-        }
-        return `> ${h1}`
-      }))
-    }
-
-    element = element.replace(/^(\s*)/, `$1${prefix} `)
-
-    return `${element}${brackets}`
-  })
-}
-
-function scopeCss(element, originalDestination, prefix) {
-  console.log(element)
-  console.log(originalDestination)
-  console.log(prefix)
-
-  let destination = originalDestination
-
-  destination.innerHTML = ''
-
-  const styles = element.querySelectorAll('style[scoped]')
-
-  const head = document.head || document.getElementsByTagName('head')[0]
-
-  styles.forEach((style, styleIndex) => {
-    const styleTag = style.innerHTML
-
-    if (styleTag !== null) {
-      const styleId = `${prefix}_${styleIndex}`
-      const stylePrefix = `#${styleId}`
-
-      const wrapperNode = document.createElement('span')
-      wrapperNode.id = styleId
-
-      destination = destination.appendChild(wrapperNode)
-      wrapperNode.appendChild(style.parentNode)
-      style.parentNode.removeChild(style)
-
-      if (document.querySelector(`[data-id=${styleId}]`) === null) {
-        const scopedStyleTag = scopeTag(styleTag, stylePrefix)
-
-        const newStyle = document.createElement('style')
-        newStyle.dataset.id = styleId
-
-        newStyle.appendChild(document.createTextNode(scopedStyleTag))
-
-        head.appendChild(newStyle)
-      }
-    }
-  })
-}

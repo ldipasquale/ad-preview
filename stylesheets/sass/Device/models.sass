@@ -9,7 +9,7 @@
     height: 100%
     z-index: 2
     background: white
-    overflow: hidden
+    overflow: auto
     display: block
     border-radius: 1px
     box-shadow: 0 0 0 3px #111
@@ -29,8 +29,8 @@
     position: absolute
   
   &--iphone8
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     padding: 105px 24px
     background: #d9dbdc
     border-radius: 56px
@@ -278,8 +278,8 @@
         margin-top: -5px
             
   &--iphone8plus
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     padding: 112px 26px
     background: #d9dbdc
     border-radius: 56px
@@ -529,8 +529,8 @@
   &--iphone5s, &--iphone5c
     padding: 105px 22px
     background: #2c2b2c
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     border-radius: 50px
 
     &:before
@@ -620,8 +620,8 @@
     
     &--landscape
       padding: 22px 105px
-      height: $deviceWidth
-      width: $deviceHeight
+      height: $phoneDeviceWidth
+      width: $phoneDeviceHeight
 
       .sleep
         right: -4px
@@ -816,8 +816,8 @@
             
   &--iphone4s
     padding: 129px 27px
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     background: #686868
     border-radius: 54px
 
@@ -941,8 +941,8 @@
           
     &--landscape
       padding: 27px 129px
-      height: $deviceWidth
-      width: $deviceHeight
+      height: $phoneDeviceWidth
+      width: $phoneDeviceHeight
 
       .bottom-bar
         left: 90px
@@ -1030,8 +1030,8 @@
             
   &--nexus5
     padding: 50px 15px 50px 15px
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     background: #1e1e1e
     border-radius: 20px
 
@@ -1114,8 +1114,8 @@
           
     &--landscape
       padding: 15px 50px 15px 50px
-      height: $deviceWidth
-      width: $deviceHeight
+      height: $phoneDeviceWidth
+      width: $phoneDeviceHeight
 
       &:before
         width: 103.1%
@@ -1160,8 +1160,8 @@
   &--s5
     padding: 60px 18px
     border-radius: 42px
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     background: #bcbcbc
 
     &:before, &:after
@@ -1297,8 +1297,8 @@
     
     &--landscape
       padding: 18px 60px
-      height: $deviceWidth
-      width: $deviceHeight
+      height: $phoneDeviceWidth
+      width: $phoneDeviceHeight
 
       &:before, &:after
         height: calc(100% - 52px)
@@ -1386,8 +1386,8 @@
             
   &--lumia920
     padding: 80px 35px 125px 35px
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     border-radius: 40px / 3px
 
     .bottom-bar
@@ -1468,8 +1468,8 @@
     
     &--landscape
       padding: 35px 80px 35px 125px
-      height: $deviceWidth
-      width: $deviceHeight
+      height: $phoneDeviceWidth
+      width: $phoneDeviceHeight
       border-radius: 2px / 100px
 
       .top-bar
@@ -1526,8 +1526,8 @@
       
   &--htc-one
     padding: 72px 25px 100px 25px
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     background: #bebebe
     border-radius: 34px
 
@@ -1649,8 +1649,8 @@
           
     &--landscape
       padding: 25px 72px 25px 100px
-      height: $deviceWidth
-      width: $deviceHeight
+      height: $phoneDeviceWidth
+      width: $phoneDeviceHeight
 
       .top-bar
         height: calc(100% - 4px)
@@ -1687,8 +1687,8 @@
           top: -12px
                     
   &--ipad
-    width: 576px
-    height: 768px
+    width: $tabletDeviceWidth
+    height: $tabletDeviceHeight
     padding: 90px 25px
     background: #242324
     border-radius: 44px
@@ -1741,8 +1741,8 @@
         left: 50%
           
     &--landscape
-      height: 576px
-      width: 768px
+      height: $tabletDeviceWidth
+      width: $tabletDeviceHeight
       padding: 25px 90px
 
       .camera
@@ -1873,8 +1873,8 @@
       display: none
       
   &--iphone-x
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     padding: 26px
     background: #fdfdfd
     box-shadow: inset 0 0 11px 0 black
@@ -2119,8 +2119,8 @@
           top: -8px
                     
   &--note8
-    width: $deviceWidth
-    height: $deviceHeight
+    width: $phoneDeviceWidth
+    height: $phoneDeviceHeight
     background: black
     border-radius: 34px
     padding: 45px 10px

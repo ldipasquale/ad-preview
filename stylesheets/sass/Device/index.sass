@@ -1,12 +1,61 @@
+$phonePaddingHorizontal: 30px
+$phonePaddingVertical: 60px
+
+$tabletPaddingHorizontal: 60px
+$tabletPaddingVertical: 190px
+
 &__Device
   text-align: center
   color: #000
-  height: $deviceHeight
   transition: all .5s
+  height: $phoneDeviceHeight
+  margin: 0 auto
+
+  &--orientation-landscape
+    width: $phoneDeviceHeight
+    height: $phoneDeviceWidth
+    position: relative
+    top: 108px
+
+  &__Container
+    display: inline-block
 
   &__Content
+    transform-origin: 0 0
+
+    .screen
+      background-image: url(https://s3.amazonaws.com/creatives.jampp.com/assets/1/642x962_4LpVfVOBZHyJivyZUJYAWA.jpg) !important
+      background-size: cover !important
+
+  &--shape-phone &__Content
     transform: scale3d($deviceScaleRatio, $deviceScaleRatio, $deviceScaleRatio)
-    transform-origin: 50% 0
+    width: $phoneDeviceWidth + $phonePaddingHorizontal
+
+  &--shape-phone
+    width: $deviceScaleRatio * ($phoneDeviceWidth + $phonePaddingHorizontal)
+
+  &--shape-phone--orientation-landscape &__Content
+    transform: scale3d($deviceHorizontalScaleRatio, $deviceHorizontalScaleRatio, $deviceHorizontalScaleRatio)
+    width: $phoneDeviceHeight + $phonePaddingVertical
+
+  &--shape-phone--orientation-landscape
+    width: $deviceHorizontalScaleRatio * ($phoneDeviceHeight + $phonePaddingVertical)
+
+
+  &--shape-tablet &__Content
+    transform: scale3d($tabletDeviceScaleRatio, $tabletDeviceScaleRatio, $tabletDeviceScaleRatio)
+    width: $tabletDeviceWidth + $tabletPaddingHorizontal
+
+  &--shape-tablet
+    width: $tabletDeviceScaleRatio * ($tabletDeviceWidth + $tabletPaddingHorizontal)
+
+  &--shape-tablet--orientation-landscape &__Content
+    transform: scale3d($tabletDeviceHorizontalScaleRatio, $tabletDeviceHorizontalScaleRatio, $tabletDeviceHorizontalScaleRatio)
+    width: $tabletDeviceHeight + $tabletPaddingVertical
+
+  &--shape-tablet--orientation-landscape
+    width: $tabletDeviceHorizontalScaleRatio * ($tabletDeviceHeight + $tabletPaddingVertical)
+
 
   &__Model
     @import 'models'

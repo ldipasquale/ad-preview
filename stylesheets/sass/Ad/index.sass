@@ -1,18 +1,32 @@
 &__Ad
-  pointer-events: none
-  position: relative
-  overflow: hidden
   display: flex
   justify-content: center
 
-  > *
+  &__Content
+    pointer-events: none
+    position: absolute
+    left: 0
+    top: 0
+    overflow: auto
+
+    &--width-300
+      left: 10px
+
+    &--height-250
+      top: 100px
+
+    &--width-728
+      left: 20px
+
+  > div
     display: inline-block
+    text-align: left
+    line-height: 1
 
   .ad,
   .link
     left: 0
     top: 0
-    line-height: 1em
 
     img
       display: inline-block

@@ -2,10 +2,19 @@
   height: 100%
   display: flex !important
   align-items: center
-  min-height: $deviceHeight
+  min-height: $phoneDeviceHeight
+
+  .slick-list
+    width: 100%
+    margin: 0 auto
 
   .slick-slide
     outline: 0
+    margin: 0
+
+    &.slick-center
+      position: relative
+      z-index: 1
 
     &:not(.slick-center)
       .jampp__Device

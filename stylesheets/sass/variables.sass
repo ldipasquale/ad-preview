@@ -1,3 +1,13 @@
+$phoneDeviceWidth: 320px
+$phoneDeviceHeight: 480px
+
+$tabletDeviceWidth: 768px
+$tabletDeviceHeight: 1024px
+
+$deviceHorizontalScaleMultiplier: 0.85
+
 $deviceScaleRatio: 0.8
-$deviceWidth: 320px
-$deviceHeight: 480px
+$deviceHorizontalScaleRatio: $deviceScaleRatio * $deviceHorizontalScaleMultiplier
+
+$tabletDeviceScaleRatio: $deviceScaleRatio * ($phoneDeviceHeight / $tabletDeviceHeight)
+$tabletDeviceHorizontalScaleRatio: $tabletDeviceScaleRatio * $deviceHorizontalScaleRatio

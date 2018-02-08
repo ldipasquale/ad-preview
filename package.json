@@ -1,0 +1,26 @@
+{
+  "name": "ruby-creatives-preview",
+  "version": "1.0.0",
+  "description": "Jampp - Ad Preview",
+  "main": "index.js",
+  "scripts": {
+    "build:html:replace": "sed -e 's/src=\"scripts/src=\"dist/g' index.html > index.dist.html",
+    "build:html:inliner": "inliner -i -m index.dist.html > dist/index.html",
+    "build:html": "yarn build:html:replace && yarn build:html:inliner",
+    "build:js": "babel scripts/main.js > dist/main.js && babel scripts/scopeCss.js > dist/scopeCss.js && babel scripts/adBlock.js > dist/adBlock.js",
+    "build:css": "sass --update stylesheets/sass:stylesheets/css",
+    "watch:css": "sass --watch stylesheets/sass:stylesheets/css",
+    "dev": "yarn watch:css",
+    "clean:pre": "rm -r dist && mkdir dist",
+    "clean:post": "rm index.dist.html && rm dist/*.js",
+    "build": "yarn clean:pre && yarn build:css && yarn build:js && yarn build:html && yarn clean:post"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {}
+}
